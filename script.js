@@ -1,8 +1,15 @@
-const labels =  document.querySelectorAll(".form-control label")
+/** @format */
 
-labels.forEach(label => {
+//@format
+
+const labels = document.querySelectorAll('.form-control label');
+
+labels.forEach((label) => {
     label.innerHTML = label.innerText
         .split('')
-            .map((letter, idx) => `<span  style="transition-delay:${idx * 40}ms">${letter}</span>`)
-            .join('')
-})
+        .map(
+            (letter, idx) =>
+                `<span  style="transition-delay:${idx * 40}ms">${letter}</span>`
+        )
+        .join('');
+});
